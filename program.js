@@ -179,7 +179,7 @@ hall3.addEventListener('click', () => {
  hallList.classList.remove('hall__list-active')
  arrowDown.classList.add('arrow-down')
  arrowDown.classList.remove('arrow-up')
- choice.innerHTML = hall2.innerHTML
+ choice.innerHTML = hall3.innerHTML
  let schedule = document.createElement('div')
  schedule.className = 'mobile__schedule'
  wrapper.append(schedule)
