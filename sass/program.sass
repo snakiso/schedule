@@ -1,0 +1,396 @@
+@import 'program-schedule'
+@import 'program-navigation'
+$blue: rgba(27, 117, 187, 1)
+body
+ max-width: 2560px
+ font-family: 'Roboto', sans-serif
+ font-weight: 400
+ margin: auto
+ z-index: 3
+.program
+ padding: 0 15px
+ &__head
+  font-size: 40px
+  max-width: 1300px
+  margin: 80px auto 55px auto
+  font-weight: 700
+  color: $blue
+  text-transform: uppercase
+ &__head:after
+  content: ''
+  position: relative
+  display: block
+  background:  #ED2424
+  left: 0
+  bottom: -14px
+  height: 1px
+  width: 120px
+ &__navigation
+  max-width: 1300px 
+  display: flex
+  margin: auto
+  justify-content: space-between
+.program__choice
+ display: none
+
+@media screen and ( max-width: 1000px )
+ .program
+  &__head
+   font-size: 32px
+   width: 272px
+  &__navigation
+   max-width: 272px
+   flex-direction: column-reverse  
+   row-gap: 40px
+ .program__choice
+  display: block
+  margin: 20px auto
+  font-size: 12px
+  max-width: 272px
+ .choice__hall
+  position: relative
+  z-index: 10
+  display: flex
+  border: 1px solid rgba(196, 196, 196, 1)
+  background-color: #FAFAFA
+  font-size: 16px
+  justify-content: space-between
+ .choice__hall-value
+  color: rgba(27, 117, 187, 1)
+ .choice__hall p:first-child
+  margin-left: 10px 
+ .choice__hall-button
+  margin-right: 10px
+  border: none
+  background-color: #FAFAFA
+  cursor: pointer
+ .arrow-down
+  border: solid rgba(27, 117, 187, 1)
+  border-width: 0 2px 2px 0
+  display: inline-block
+  padding: 3px
+  transform: rotate(45deg)
+  transition: all 0.5s ease-out
+ .arrow-up
+  border: solid rgba(27, 117, 187, 1)
+  border-width: 0 2px 2px 0
+  display: inline-block
+  padding: 3px
+  transform: rotate(225deg)
+  transition: all 0.5s ease-out
+ .hall__list
+  display: none
+  position: relative
+  z-index: 1
+  transition: all 0.3s linear
+ .hall__list-active
+  z-index: 2
+  top: 0
+  display: inline
+  margin: 0
+  display: block
+  border: 1px solid rgba(196, 196, 196, 1)
+  background-color: #FAFAFA
+  font-size: 16px
+  transition: all 0.3s ease-in
+ .hall__item
+  margin-top: 15px
+ .mobile-schedule__wrapper
+  max-width: 272px
+  display: flex
+  justify-content: space-between
+  margin: auto
+ .mobile__schedule
+  margin: 20px 0 0 0
+  width: 40px
+  max-height: 1805px  
+  background-color: rgba(250, 250, 250, 1)
+  border: 1px solid rgba(242, 242, 242, 1)
+ .mobile__schedule-time
+  font-size: 12px
+  text-align: center
+ .mobile__schedule-time:not(:first-child)
+  padding: 40px 0
+  border-top: 2px solid rgba(196, 196, 196, 1)
+ .mobile__schedule-time:first-child
+  padding: 10px 0 40px 0 
+ .mobile__schedule-time:last-child
+  padding-bottom: 10px
+ .mobile__wrap
+  display: flex
+  flex-direction: column
+  row-gap: 2px
+  margin-top: 37px
+
+
+ .mobile__jd-transport 
+  border: 1px solid #26a8e098
+  background-color:  #e8f0fea8
+  width: 220px
+  margin: 35px 0 0 10px
+  max-height: 390px
+  font-weight: bold
+  padding-left: 12px
+ .mobile__jd-transport h3
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+ .mobile__jd-transport p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  line-height: 16.8px
+ .mobile__jd-transport:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px
+  
+
+
+ .mobile__air-transport-1
+  width: 220px
+  height: 287px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px
+  font-weight: bold
+ .mobile__air-transport-1 h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__air-transport-1 p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__air-transport-1 p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px
+  padding-left: 12px
+  
+
+
+ .mobile__coffeeBreak
+  width: 220px
+  height: 90px
+  background-color: rgba(237, 36, 36, 0.12)
+  border: 1px solid #be1e2e1f
+  display: flex
+  justify-content: center
+  align-items: center
+  color: rgba(190, 30, 45, 1)
+  font-weight: bold
+
+ .mobile__open-forum
+  width: 220px
+  height: 380px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px
+  font-weight: bold
+ .mobile__open-forum h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__open-forum p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__open-forum p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px 
+  padding-left: 12px
+  
+
+
+ .mobile__dinner
+  width: 220px
+  height: 190px
+  background-color: rgba(237, 36, 36, 0.12)
+  border: 1px solid #be1e2e1f
+  display: flex
+  justify-content: center
+  align-items: center
+  color: rgba(190, 30, 45, 1)
+  font-weight: bold
+
+
+ .mobile__air-transport-2
+  width: 220px
+  height: 480px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px
+  font-weight: bold
+ .mobile__air-transport-2 h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__air-transport-2 p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__air-transport-2 p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px
+  padding-left: 12px
+  
+
+
+ .mobile__road-complex
+  margin-top: 35px
+  width: 220px
+  height: 580px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px  
+  font-weight: bold
+ .mobile__road-complex h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__road-complex p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__road-complex p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px
+  padding-left: 12px 
+  
+
+
+ .mobile__logistic-complex
+  width: 220px
+  height: 290px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px  
+  font-weight: bold
+ .mobile__logistic-complex h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__logistic-complex p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__logistic-complex p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px 
+  padding-left: 12px
+  
+ 
+ .mobile__logistic-complex1
+  width: 220px
+  height: 570px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px 
+  font-weight: bold 
+ .mobile__logistic-complex1 h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__logistic-complex1 p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__logistic-complex1 p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px 
+  padding-left: 12px
+  
+ 
+
+ .mobile__road-complex1
+  width: 220px
+  height: 290px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px  
+  font-weight: bold
+ .mobile__road-complex1 h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__road-complex1 p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__road-complex1 p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px 
+  padding-left: 12px
+  
+  
+
+ .mobile__safety-traffic
+  width: 220px
+  height: 570px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px  
+  font-weight: bold
+ .mobile__safety-traffic h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__safety-traffic p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__safety-traffic p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px 
+  padding-left: 12px
+  
+
+
+ .mobile__road-complex2
+  margin-top: 35px
+  width: 220px
+  height: 480px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px  
+  font-weight: bold
+ .mobile__road-complex2 h3 
+  color: rgba(60, 104, 177, 1) 
+  font-size: 12px
+  text-transform: uppercase
+  padding-left: 12px
+ .mobile__road-complex2 p:not(:last-child)
+  color: rgba(118, 118, 118, 1)
+  font-size: 12px
+  padding-left: 12px
+ .mobile__road-complex2 p:last-child
+  color: rgba(27, 117, 187, 1)
+  font-size: 12px
+  padding-left: 12px
+  
+
+ .nop-planned
+  margin-top: 35px
+  font-size: 12px
+  color: rgba(60, 104, 177, 1) 
+  text-transform: uppercase
+  font-weight: bold
+  padding-left: 10px
+ 
+
+ .mobile__exhibition
+  margin-top: 35px
+  width: 220px
+  height: 195px
+  border: 1px solid #26a8e098
+  background-color: #e8f0fea8
+  font-size: 12px   
+  color: rgba(60, 104, 177, 1) 
+ .mobile__exhibition h3
+  padding-left: 12px

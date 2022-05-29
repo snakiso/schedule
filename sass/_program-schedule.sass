@@ -1,0 +1,178 @@
+ul
+ list-style: none
+ padding: 0
+ color: rgba(27, 117, 187, 1)
+.program__place
+ width: 130px
+ height: 44px
+ margin-top: 54px
+.program__schedule-wrapper
+ margin: 30px auto 0 auto
+ max-width: 1300px
+ display: flex
+.program__schedule
+ max-height: 1200px
+ overflow-x: auto
+ scrollbar-width: none
+ -ms-overflow-style: none
+ margin-left: 92px
+ border: 1px solid rgba(196, 196, 196, 0.5)
+ border-right: none
+::-webkit-scrollbar
+ height: 0px
+ background: rgba(255, 255, 255, 0.0)
+.schedule__time
+ min-width: 4538px
+ display: flex
+ background-color: rgba(242, 242, 242, 1)
+ font-size: 12px
+ font-weight: 700
+ padding: 0 38px
+ border-bottom: 1px solid rgba(196, 196, 196, 0.5)
+.schedule__time p
+ text-align: center
+ height: 17px
+ line-height: 16.8px
+.schedule__time p:not(:first-child)
+ margin-left: 207px
+.schedule__event
+ max-height: 1200px
+ position: relative
+ 
+.horizont__lines
+ position: absolute
+.horizont__line
+ width: 4614px
+ height: 1px
+ background-color: rgba(196, 196, 196, 0.5)
+ margin-top: 97px
+.vertical__lines
+ display: inline-flex
+ margin-left: 60px
+.vertical__line
+ width: 1px
+ height: 998px
+ background-color: rgba(196, 196, 196, 0.5)
+.vertical__lines div:not(:first-child)
+ margin-left: 124px
+.event__action-border
+ border: 1px solid rgba(38, 169, 224, 0.3)
+ background-color: rgba(232, 240, 254, 0.3)
+ font-weight: bold
+.break-border
+ border: 1px solid #be1e2e5b
+ background-color: #ed242413
+.event__action-bypass
+ position: absolute
+ font-size: 20px
+ width: 499px
+ height: 72px
+ color: rgba(27, 117, 187, 1)
+ margin: 797px 0 130px 60px
+ font-weight: 700
+.event__action-bypass p
+ margin: 0
+ width: 220px
+ height: 28px
+ padding: 16px 259px 28px 20px
+.event__action-airplanes
+ position: absolute
+ width: 749px
+ height: 170px
+ margin: 110px 0 718px 560px
+.action__info
+ display: flex
+ font-size: 12px
+ height: 22px
+ margin: 16px 19px 0
+ align-items: center
+.action__info p:first-child
+ color: rgba(60, 104, 177, 1)
+.action__info p:not(:first-child)
+ color: rgba(118, 118, 118, 1)
+ height: 16px
+ text-align: end
+ border-left: 2px solid rgba(118, 118, 118, 1)
+ margin-left: 8px
+ padding-left: 8px
+.schedule__event h3
+ color: rgba(27, 117, 187, 1)
+ font-size: 12px
+ line-height: 17px
+ margin: 4px 19px 
+.event__action-complex
+ width: 749px
+ height: 71px
+ position: absolute
+ margin: 404px 0 522px 560px
+.event__action-complex1
+ width: 749px
+ height: 71px
+ position: absolute
+ margin: 502px 0 424px 560px
+.event__action-break
+ position: absolute
+ width: 249px
+ height: 973px
+ margin: 13px 0 13px 1310px
+ display: flex
+ justify-content: center
+ align-items: center
+.event__action-break p
+ color: rgba(190, 30, 45, 1)
+ font-size: 20px
+ line-height: 28px
+ font-weight: 700
+.event__action-forum
+ position: absolute
+ width: 998px
+ height: 170px
+ margin: 110px 0 718px 1561px
+.event__action-break1
+ position: absolute
+ width: 499px
+ height: 973px
+ margin: 13px 0 13px 2560px
+ display: flex
+ justify-content: center
+ align-items: center
+ .event__action-break1 p
+ color: rgba(190, 30, 45, 1)
+ font-size: 20px
+ line-height: 28px
+ font-weight: 700
+.event__action-jd
+ position: absolute
+ width: 1499px
+ height: 71px
+ margin: 13px 0 913px 3060px
+.event__action-airlines
+ position: absolute
+ width: 1249px
+ height: 170px
+ margin: 110px 0 718px 3060px
+.event__action-complex2
+ position: absolute
+ width: 1499px
+ height: 71px
+ margin: 306px 0 620px 3060px
+.event__action-complex3
+ position: absolute
+ width: 1249px
+ height: 71px
+ margin: 404px 0 522px 3060px
+.event__action-save
+ position: absolute
+ width: 1249px
+ height: 71px
+ margin: 504px 0 424px 3060px
+.event__action-complex4
+ position: absolute
+ width: 1249px
+ height: 71px
+ margin: 599px 0 338px 3060px
+
+
+@media screen and ( max-width: 1000px )
+ .program__schedule-wrapper
+  display: none
